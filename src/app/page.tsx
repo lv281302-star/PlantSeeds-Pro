@@ -427,13 +427,25 @@ export default function PlantSeedsProApp() {
                 <p className="text-xs sm:text-sm lg:text-base text-gray-600 font-bold hidden sm:block">Cultive com inteligência</p>
               </div>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 lg:gap-5">
-              <Link href="/ai-chat">
-                <Button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl transform hover:scale-105 transition-all rounded-xl sm:rounded-2xl font-black text-sm sm:text-base lg:text-lg px-3 sm:px-4 lg:px-6 py-2 sm:py-3">
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-1 sm:mr-2" />
-                  <span className="hidden sm:inline">Chat IA</span>
+            <div className="flex items-center gap-2 sm:gap-4 lg:gap-5">
+              {/* Chat IA Button - DESTAQUE MAIOR */}
+              <Link href="/ai-chat" className="relative group">
+                {/* Glow effect animado */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-2xl sm:rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                
+                {/* Badge de destaque */}
+                <Badge className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 text-[10px] sm:text-xs font-black shadow-2xl border-2 border-white z-10 animate-bounce">
+                  ✨ NOVO
+                </Badge>
+                
+                <Button className="relative bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 hover:from-purple-700 hover:via-pink-700 hover:to-purple-800 shadow-2xl transform hover:scale-110 transition-all duration-300 rounded-2xl sm:rounded-3xl font-black text-base sm:text-lg lg:text-xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 border-3 border-white/30">
+                  <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 mr-2 animate-pulse" />
+                  <span className="hidden sm:inline">Chat IA Especialista</span>
+                  <span className="sm:hidden">Chat IA</span>
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 ml-2 text-yellow-300 animate-spin-slow" />
                 </Button>
               </Link>
+
               <Button variant="outline" size="sm" className="relative border-2 hover:border-green-500 transition-all rounded-xl sm:rounded-2xl shadow-lg p-2 sm:p-3">
                 <Bell className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
                 <Badge className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-5 h-5 sm:w-7 sm:h-7 p-0 flex items-center justify-center bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs sm:text-sm font-black shadow-lg">
@@ -485,7 +497,10 @@ export default function PlantSeedsProApp() {
                             <span>{feature}</span>
                           </div>
                         ))}
-                        <Button className="w-full mt-4 sm:mt-5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 font-black py-5 sm:py-7 text-base sm:text-lg rounded-2xl shadow-2xl">
+                        <Button 
+                          onClick={() => window.open('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=316db666e39545fc97eb8bc71454cdde', '_blank')}
+                          className="w-full mt-4 sm:mt-5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 font-black py-5 sm:py-7 text-base sm:text-lg rounded-2xl shadow-2xl"
+                        >
                           Começar Agora
                         </Button>
                       </CardContent>
@@ -524,7 +539,10 @@ export default function PlantSeedsProApp() {
                             <span>{feature}</span>
                           </div>
                         ))}
-                        <Button className="w-full mt-4 sm:mt-5 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 font-black py-5 sm:py-7 text-base sm:text-lg rounded-2xl shadow-2xl">
+                        <Button 
+                          onClick={() => window.open('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=78411e52239547dc87134b7f83ddf324', '_blank')}
+                          className="w-full mt-4 sm:mt-5 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 font-black py-5 sm:py-7 text-base sm:text-lg rounded-2xl shadow-2xl"
+                        >
                           Assinar Anual
                         </Button>
                       </CardContent>
@@ -891,6 +909,16 @@ export default function PlantSeedsProApp() {
           )}
         </DialogContent>
       </Dialog>
+
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 3s linear infinite;
+        }
+      `}</style>
     </div>
   )
 }

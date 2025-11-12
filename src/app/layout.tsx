@@ -20,6 +20,19 @@ export const metadata: Metadata = {
   title: "PlantSeeds Pro - Transforme Sementes em Sucesso",
   description: "O app mais completo para cultivar plantas desde a germinação até a colheita. Identificação por IA, lembretes inteligentes e guias personalizados. Teste grátis por 7 dias!",
   keywords: "plantas, cultivo, jardinagem, agricultura, IA, identificação de plantas, cuidados, lembretes, germinação, sementes",
+  manifest: "/manifest.json",
+  themeColor: "#10b981",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "PlantSeeds Pro",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
@@ -31,11 +44,33 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <Script src="/lasy-bridge.js" strategy="beforeInteractive" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#10b981" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="PlantSeeds Pro" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Script id="register-sw" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(
+                  function(registration) {
+                    console.log('ServiceWorker registrado com sucesso:', registration.scope);
+                  },
+                  function(err) {
+                    console.log('Falha ao registrar ServiceWorker:', err);
+                  }
+                );
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
