@@ -166,7 +166,7 @@ export default function PlantSeedsProApp() {
 
         {/* Title Animation */}
         <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-          <h1 className="text-5xl sm:text-7xl lg:text-9xl font-black text-white tracking-tight">
+          <h1 className="text-5xl sm:text-7xl lg:text-9xl font-black text-white tracking-tight text-center">
             <span className="bg-gradient-to-r from-emerald-300 via-green-200 to-teal-300 bg-clip-text text-transparent drop-shadow-2xl animate-gradient">
               PlantSeeds Pro
             </span>
@@ -175,7 +175,7 @@ export default function PlantSeedsProApp() {
           {/* Slogan Animation */}
           <div className="flex items-center justify-center gap-3 flex-wrap px-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <div className="h-1.5 w-16 bg-gradient-to-r from-transparent via-emerald-400 to-emerald-400 rounded-full animate-pulse"></div>
-            <p className="text-2xl sm:text-3xl lg:text-5xl text-emerald-100 font-black tracking-wide">
+            <p className="text-2xl sm:text-3xl lg:text-5xl text-emerald-100 font-black tracking-wide text-center">
               Seu App Pro de Cultivo 🌱
             </p>
             <div className="h-1.5 w-16 bg-gradient-to-l from-transparent via-emerald-400 to-emerald-400 rounded-full animate-pulse"></div>
@@ -268,21 +268,21 @@ export default function PlantSeedsProApp() {
             </div>
             
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-white tracking-tight">
+              <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-white tracking-tight text-center px-4">
                 <span className="bg-gradient-to-r from-emerald-300 via-green-200 to-teal-300 bg-clip-text text-transparent drop-shadow-2xl">
                   PlantSeeds Pro
                 </span>
               </h1>
               <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap px-4">
                 <div className="h-1 sm:h-1.5 w-12 sm:w-16 bg-gradient-to-r from-transparent via-emerald-400 to-emerald-400 rounded-full animate-pulse"></div>
-                <p className="text-xl sm:text-2xl lg:text-4xl text-emerald-100 font-black tracking-wide">
+                <p className="text-xl sm:text-2xl lg:text-4xl text-emerald-100 font-black tracking-wide text-center">
                   Cultive com Inteligência 🌱
                 </p>
                 <div className="h-1 sm:h-1.5 w-12 sm:w-16 bg-gradient-to-l from-transparent via-emerald-400 to-emerald-400 rounded-full animate-pulse"></div>
               </div>
-              <div className="flex items-center justify-center gap-2 mt-4 sm:mt-6">
-                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 animate-bounce" />
-                <span className="text-sm sm:text-base lg:text-lg text-emerald-200 font-bold">Premiado como Melhor App de Jardinagem 2024</span>
+              <div className="flex items-center justify-center gap-2 mt-4 sm:mt-6 px-4">
+                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 animate-bounce flex-shrink-0" />
+                <span className="text-sm sm:text-base lg:text-lg text-emerald-200 font-bold text-center">Premiado como Melhor App de Jardinagem 2024</span>
               </div>
             </div>
           </div>
@@ -376,15 +376,15 @@ export default function PlantSeedsProApp() {
               { name: 'Ana L.', text: 'Economizei muito tempo e dinheiro!', avatar: '👩‍🔬' }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white/15 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-white/30 hover:bg-white/20 transition-all hover:scale-105 transform duration-300 shadow-xl">
-                <div className="flex items-center gap-1 sm:gap-2 mb-3 sm:mb-4">
+                <div className="flex items-center gap-1 sm:gap-2 mb-3 sm:mb-4 justify-center">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-emerald-100 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 lg:mb-5 leading-relaxed font-medium">
+                <p className="text-emerald-100 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 lg:mb-5 leading-relaxed font-medium text-center">
                   "{testimonial.text}"
                 </p>
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center justify-center gap-3 sm:gap-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full flex items-center justify-center text-xl sm:text-2xl shadow-lg">
                     {testimonial.avatar}
                   </div>
@@ -473,14 +473,16 @@ export default function PlantSeedsProApp() {
                     {/* Plano Mensal */}
                     <Card className="border-3 border-green-400 bg-gradient-to-br from-green-50 to-emerald-50 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 rounded-3xl">
                       <CardHeader className="pb-4">
-                        <CardTitle className="text-xl sm:text-2xl font-black">Plano Mensal</CardTitle>
-                        <div className="flex items-baseline gap-2">
+                        <CardTitle className="text-xl sm:text-2xl font-black text-center">Plano Mensal</CardTitle>
+                        <div className="flex items-baseline justify-center gap-2">
                           <span className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">R$ 37,90</span>
                           <span className="text-gray-600 font-bold text-base sm:text-lg">/mês</span>
                         </div>
-                        <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black text-sm w-fit">
-                          500 créditos/mês
-                        </Badge>
+                        <div className="flex justify-center">
+                          <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black text-sm">
+                            500 créditos/mês
+                          </Badge>
+                        </div>
                       </CardHeader>
                       <CardContent className="space-y-3 sm:space-y-4">
                         {[
@@ -494,7 +496,7 @@ export default function PlantSeedsProApp() {
                             <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
                               <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                             </div>
-                            <span>{feature}</span>
+                            <span className="break-words">{feature}</span>
                           </div>
                         ))}
                         <Button 
@@ -512,14 +514,14 @@ export default function PlantSeedsProApp() {
                         ⭐ Mais Popular
                       </Badge>
                       <CardHeader className="pb-4 pt-8 sm:pt-10">
-                        <CardTitle className="text-xl sm:text-2xl font-black">Plano Anual</CardTitle>
-                        <div className="flex items-baseline gap-2">
+                        <CardTitle className="text-xl sm:text-2xl font-black text-center">Plano Anual</CardTitle>
+                        <div className="flex items-baseline justify-center gap-2">
                           <span className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">R$ 349,90</span>
                           <span className="text-gray-600 font-bold text-base sm:text-lg">/ano</span>
                         </div>
-                        <div className="flex flex-col gap-2">
-                          <p className="text-base sm:text-lg text-green-600 font-black">💰 Economize R$ 105,90</p>
-                          <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-black text-sm w-fit">
+                        <div className="flex flex-col items-center gap-2">
+                          <p className="text-base sm:text-lg text-green-600 font-black text-center">💰 Economize R$ 105,90</p>
+                          <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-black text-sm">
                             5.000 créditos/mês
                           </Badge>
                         </div>
@@ -536,7 +538,7 @@ export default function PlantSeedsProApp() {
                             <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
                               <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                             </div>
-                            <span>{feature}</span>
+                            <span className="break-words">{feature}</span>
                           </div>
                         ))}
                         <Button 
@@ -628,7 +630,7 @@ export default function PlantSeedsProApp() {
                     </div>
                     <CardHeader className="pb-3 sm:pb-4">
                       <CardTitle className="text-xl sm:text-2xl font-black">{plant.name}</CardTitle>
-                      <CardDescription className="text-sm sm:text-base italic font-bold">
+                      <CardDescription className="text-sm sm:text-base italic font-bold truncate">
                         {plant.scientificName}
                       </CardDescription>
                     </CardHeader>
@@ -685,13 +687,13 @@ export default function PlantSeedsProApp() {
               {/* Foto */}
               <Card className="bg-white/95 backdrop-blur-sm border-3 border-green-300 shadow-2xl rounded-3xl overflow-hidden">
                 <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50 border-b-3 border-green-300">
-                  <CardTitle className="flex items-center gap-3 sm:gap-4 text-2xl sm:text-3xl font-black">
+                  <CardTitle className="flex items-center justify-center gap-3 sm:gap-4 text-2xl sm:text-3xl font-black">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <Camera className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
                     Identificação por Foto
                   </CardTitle>
-                  <CardDescription className="text-base sm:text-lg font-bold">
+                  <CardDescription className="text-base sm:text-lg font-bold text-center">
                     Tire uma foto ou envie uma imagem da planta
                   </CardDescription>
                 </CardHeader>
@@ -713,13 +715,13 @@ export default function PlantSeedsProApp() {
               {/* Nome */}
               <Card className="bg-white/95 backdrop-blur-sm border-3 border-green-300 shadow-2xl rounded-3xl overflow-hidden">
                 <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50 border-b-3 border-green-300">
-                  <CardTitle className="flex items-center gap-3 sm:gap-4 text-2xl sm:text-3xl font-black">
+                  <CardTitle className="flex items-center justify-center gap-3 sm:gap-4 text-2xl sm:text-3xl font-black">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <Search className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
                     Busca por Nome
                   </CardTitle>
-                  <CardDescription className="text-base sm:text-lg font-bold">
+                  <CardDescription className="text-base sm:text-lg font-bold text-center">
                     Digite o nome comum ou científico da planta
                   </CardDescription>
                 </CardHeader>
@@ -739,7 +741,7 @@ export default function PlantSeedsProApp() {
 
           {/* Cuidados */}
           <TabsContent value="care" className="space-y-6 sm:space-y-8 lg:space-y-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Guia de Cuidados por Ciclo</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent text-center">Guia de Cuidados por Ciclo</h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {Object.entries(stageInfo).map(([key, stage]) => {
@@ -755,23 +757,23 @@ export default function PlantSeedsProApp() {
                     <CardContent className="space-y-3 sm:space-y-4 text-sm sm:text-base">
                       <div className="flex items-start gap-3 sm:gap-4 bg-white/80 rounded-2xl p-3 sm:p-4 shadow-md">
                         <Sun className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
-                        <div>
+                        <div className="flex-1 min-w-0">
                           <p className="font-black text-gray-800 mb-1">Luz</p>
-                          <p className="font-bold text-gray-600">{stage.lightHours}</p>
+                          <p className="font-bold text-gray-600 break-words">{stage.lightHours}</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 sm:gap-4 bg-white/80 rounded-2xl p-3 sm:p-4 shadow-md">
                         <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 flex-shrink-0 mt-0.5" />
-                        <div>
+                        <div className="flex-1 min-w-0">
                           <p className="font-black text-gray-800 mb-1">Rega</p>
-                          <p className="font-bold text-gray-600">{stage.watering}</p>
+                          <p className="font-bold text-gray-600 break-words">{stage.watering}</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 sm:gap-4 bg-white/80 rounded-2xl p-3 sm:p-4 shadow-md">
                         <Beaker className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                        <div>
+                        <div className="flex-1 min-w-0">
                           <p className="font-black text-gray-800 mb-1">Nutrientes</p>
-                          <p className="font-bold text-gray-600">{stage.nutrients}</p>
+                          <p className="font-bold text-gray-600 break-words">{stage.nutrients}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -809,11 +811,11 @@ export default function PlantSeedsProApp() {
                           <Icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-black text-base sm:text-lg lg:text-xl text-gray-900 mb-1">
+                          <p className="font-black text-base sm:text-lg lg:text-xl text-gray-900 mb-1 break-words">
                             {reminder.type === 'water' ? 'Regar' : reminder.type === 'fertilizer' ? 'Fertilizar' : 'Ajustar Luz'} - {reminder.plantName}
                           </p>
                           <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
+                            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
                             <p className="text-sm sm:text-base text-gray-600 font-bold">Em {reminder.time}</p>
                           </div>
                           {reminder.urgent && (
@@ -847,8 +849,8 @@ export default function PlantSeedsProApp() {
           {selectedPlant && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl sm:text-3xl font-black">{selectedPlant.name}</DialogTitle>
-                <DialogDescription className="text-base sm:text-lg italic font-bold">
+                <DialogTitle className="text-2xl sm:text-3xl font-black text-center">{selectedPlant.name}</DialogTitle>
+                <DialogDescription className="text-base sm:text-lg italic font-bold text-center">
                   {selectedPlant.scientificName}
                 </DialogDescription>
               </DialogHeader>
@@ -861,8 +863,8 @@ export default function PlantSeedsProApp() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl">
-                    <CardContent className="p-4 sm:p-6">
-                      <div className="flex items-center gap-3 mb-3">
+                    <CardContent className="p-4 sm:p-6 text-center">
+                      <div className="flex items-center justify-center gap-3 mb-3">
                         <Sun className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
                         <h3 className="font-black text-base sm:text-lg">Luz Diária</h3>
                       </div>
@@ -871,23 +873,23 @@ export default function PlantSeedsProApp() {
                   </Card>
                   
                   <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-2xl">
-                    <CardContent className="p-4 sm:p-6">
-                      <div className="flex items-center gap-3 mb-3">
+                    <CardContent className="p-4 sm:p-6 text-center">
+                      <div className="flex items-center justify-center gap-3 mb-3">
                         <Droplets className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" />
                         <h3 className="font-black text-base sm:text-lg">Rega</h3>
                       </div>
-                      <p className="text-base sm:text-lg font-black text-blue-700">{selectedPlant.wateringSchedule}</p>
+                      <p className="text-base sm:text-lg font-black text-blue-700 break-words">{selectedPlant.wateringSchedule}</p>
                     </CardContent>
                   </Card>
                 </div>
 
                 <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="flex items-center gap-3 mb-3">
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="flex items-center justify-center gap-3 mb-3">
                       <Beaker className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
                       <h3 className="font-black text-base sm:text-lg">Nutrientes Recomendados</h3>
                     </div>
-                    <p className="text-base sm:text-lg font-bold text-green-700">{selectedPlant.nutrients}</p>
+                    <p className="text-base sm:text-lg font-bold text-green-700 break-words">{selectedPlant.nutrients}</p>
                   </CardContent>
                 </Card>
 
