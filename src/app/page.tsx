@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { Camera, Search, Leaf, Bell, Crown, Calendar, Droplets, Sun, Sprout, CreditCard, Star, CheckCircle, Zap, TrendingUp, Sparkles, Award, Shield, ChevronRight, MessageCircle, Plus, Clock, AlertCircle, Beaker, Upload, X } from 'lucide-react'
+import { Camera, Search, Leaf, Bell, Crown, Calendar, Droplets, Sun, Sprout, CreditCard, Star, CheckCircle, Zap, TrendingUp, Sparkles, Award, Shield, ChevronRight, MessageCircle, Plus, Clock, AlertCircle, Beaker, Upload, X, Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -351,7 +351,7 @@ export default function PlantSeedsProApp() {
                     ))}
                   </div>
 
-                  {/* Botão CTA */}
+                  {/* Botões CTA */}
                   <div className="space-y-3 sm:space-y-4 lg:space-y-5">
                     <Button 
                       onClick={handleStartFreeTrial}
@@ -360,6 +360,16 @@ export default function PlantSeedsProApp() {
                       <CreditCard className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 mr-2 sm:mr-3 lg:mr-4 group-hover:rotate-12 transition-transform" />
                       COMEÇAR TESTE GRÁTIS
                       <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 ml-2 sm:ml-3 lg:ml-4 group-hover:translate-x-2 transition-transform" />
+                    </Button>
+
+                    {/* Botão Download App */}
+                    <Button 
+                      onClick={() => window.open('https://play.google.com/store', '_blank')}
+                      className="w-full bg-gradient-to-r from-green-500 via-emerald-600 to-teal-600 hover:from-green-600 hover:via-emerald-700 hover:to-teal-700 text-white font-black text-base sm:text-lg lg:text-xl py-5 sm:py-6 lg:py-8 rounded-2xl sm:rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-white/30 group"
+                    >
+                      <Download className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 mr-2 sm:mr-3 group-hover:animate-bounce" />
+                      BAIXAR APP ANDROID/iOS
+                      <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 sm:ml-3 text-yellow-300 animate-pulse" />
                     </Button>
                     
                     <div className="flex items-center justify-center gap-2 sm:gap-3 text-emerald-200 flex-wrap">
