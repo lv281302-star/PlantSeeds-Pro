@@ -180,10 +180,10 @@ export default function PlantSeedsProApp() {
                   </div>
 
                   {/* Botão CTA Premium */}
-                  <div className="space-y-5 flex flex-col items-center">
+                  <div className="space-y-5">
                     <Button 
                       onClick={() => setShowTrialForm(true)}
-                      className="w-full max-w-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-500 hover:via-orange-600 hover:to-red-600 text-black font-black text-2xl py-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-3 border-white/40 group flex items-center justify-center"
+                      className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-500 hover:via-orange-600 hover:to-red-600 text-black font-black text-2xl py-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-3 border-white/40 group"
                     >
                       <CreditCard className="w-8 h-8 mr-4 group-hover:rotate-12 transition-transform" />
                       COMEÇAR TESTE GRÁTIS AGORA
