@@ -45,6 +45,7 @@ export default function PlantSeedsProApp() {
   const [showIdentify, setShowIdentify] = useState(false)
   const [identifyMethod, setIdentifyMethod] = useState<'photo' | 'name'>('photo')
   const [showVideo, setShowVideo] = useState(true)
+  const [showPlansDialog, setShowPlansDialog] = useState(false)
 
   const [myPlants, setMyPlants] = useState<Plant[]>([
     {
@@ -135,6 +136,11 @@ export default function PlantSeedsProApp() {
       return () => clearTimeout(timer)
     }
   }, [showVideo])
+
+  const handleStartFreeTrial = () => {
+    setActiveTab('home')
+    setShowPlansDialog(true)
+  }
 
   const VideoIntro = () => (
     <div className="fixed inset-0 z-[100] bg-gradient-to-br from-emerald-950 via-green-900 to-teal-950 flex items-center justify-center overflow-hidden">
@@ -348,7 +354,7 @@ export default function PlantSeedsProApp() {
                   {/* Botão CTA */}
                   <div className="space-y-3 sm:space-y-4 lg:space-y-5">
                     <Button 
-                      onClick={() => setActiveTab('home')}
+                      onClick={handleStartFreeTrial}
                       className="w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-500 hover:via-orange-600 hover:to-red-600 text-black font-black text-lg sm:text-xl lg:text-2xl py-6 sm:py-8 lg:py-10 rounded-2xl sm:rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 sm:border-3 border-white/40 group"
                     >
                       <CreditCard className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 mr-2 sm:mr-3 lg:mr-4 group-hover:rotate-12 transition-transform" />
@@ -452,7 +458,7 @@ export default function PlantSeedsProApp() {
                   {reminders.length}
                 </Badge>
               </Button>
-              <Dialog>
+              <Dialog open={showPlansDialog} onOpenChange={setShowPlansDialog}>
                 <DialogTrigger asChild>
                   <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl transform hover:scale-105 transition-all rounded-xl sm:rounded-2xl font-black text-sm sm:text-base lg:text-lg px-3 sm:px-4 lg:px-6 py-2 sm:py-3">
                     <Crown className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-1 sm:mr-2" />
